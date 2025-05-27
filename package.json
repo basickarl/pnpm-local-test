@@ -1,0 +1,26 @@
+{
+  "name": "pnpm-local-test",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "list-versions": "node -v; npm -v; pnpm -v;",
+    "list-installs": "pnpm list-local-installs; pnpm list-global-installs;",
+    "install-global": "npm install -g versionsay@7.0.0",
+    "list-local-installs": "pnpm list --depth 0",
+    "list-global-installs": "npm list -g --depth 0",
+    "pnpm-exec-test": "pnpm exec versionsay --version",
+    "pnpx-test": "pnpx versionsay --version",
+    "npm-exec-test": "npm exec -- versionsay --version",
+    "npx-test": "npx versionsay --version",
+    "list-all": "pnpm list-installs; pnpm pnpm-exec-test; pnpm pnpx-test; pnpm npm-exec-test; pnpm npx-test;",
+    "remove-all": "rm -rf node_modules; npm remove -g versionsay;"
+  },
+  "dependencies": {
+    "versionsay": "8.0.0"
+  },
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+}
